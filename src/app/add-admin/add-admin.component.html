@@ -1,0 +1,62 @@
+<h2 style="text-align: center; color: blueviolet">Register Librarian</h2>
+<!-- <div class="col-md-3"></div> -->
+<div class="col-md-9">
+<form #myForm="ngForm" (ngSubmit)="OnAddCallMe(myForm)">
+       
+    
+        <div class="form-group">
+            <label for="first_name">First Name<span class="required">*</span></label>
+            <input ngModel type="text" class="form-control" id="first_name" name="first_name" placeholder="Enter first_name">
+        </div>
+    
+        <div class="form-group">
+            <label for="last_name">Last Name<span class="required">*</span></label>
+            <input ngModel type="text" class="form-control" id="last_name" name="last_name" placeholder="Enter last_name">
+        </div>
+
+        <div class="form-group" style="width: 10%">
+            <label for="age">Age</label>
+            <input ngModel type="number" class="form-control" id="age" name="age" placeholder="Enter age">
+        </div>
+
+        <div class="form-group">
+            <label for="mob_no">Mob</label>
+            <input ngModel type="text" class="form-control" id="mob_no" name="mob_no" placeholder="Enter mob_no">
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email<span class="required">*</span></label>
+            <input ngModel type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password<span class="required">*</span></label>
+            <input ngModel type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label><br>
+            <input type="radio" name="gender" value="MALE"> Male &nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="gender" value="FEMALE"> Female &nbsp;&nbsp;&nbsp;&nbsp;
+        </div>
+
+        <div class="form-group">
+            <label for="role">Role</label>
+            <input ngModel type="text" class="form-control" id="role" name="role" value="ADMIN" readonly>
+        </div>
+
+        <div class="form-group">
+                <label for="image">Image</label>
+                <input ngModel type="text" class="form-control" id="image" name="image"placeholder="Upload Pic">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button style="float: right" type="button" class="btn btn-success" (click)="GoBackHome()">Go Back to Home</button>
+            <br>
+        
+            
+        <span class="label label-warning">{{message}}</span>
+        <br>
+
+</form>
+
+</div>

@@ -1,0 +1,56 @@
+
+<div class="table-responsive">
+    <table class="table table-hover" style="background-color: silver;">
+        <thead>
+            <tr style="text-align: center;">
+                <!-- <th><img src="logo.png" style="width: 150px; height: 150px;"></th> -->
+                <th style="text-align: center;"><h1 style="font-family: fantasy;"><b>LIBRARY MANAGEMENT SYSTEM</b></h1></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <nav class="navbar navbar-inverse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a routerLink="/home/about">About Us</a>    
+                        </li>
+                        <li>
+                            <a routerLink="/home/contact">Contact Us</a>
+                        </li>
+                        <li>
+                            <a routerLink="/librarians">Librarians</a>
+                        </li>
+                        <li>
+                            <a routerLink="/admin">Administrator</a>
+                        </li>
+                        <!-- <li style="text-align: end;">
+                            <a routerLink="/logout">Logout</a>
+                        </li> -->
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                            <!-- <li><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link">Logout</button></li> -->
+                               
+                                <li style="text-align: end;">
+                                    <a routerLink="/login">Login&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                </li> 
+                                <li style="text-align: end;">
+                                    <a routerLink="/logout">Logout&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                                </li>
+                          </ul>
+                </nav>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="table-responsive">
+    
+    <div class="table-responsive">
+        <router-outlet></router-outlet>
+    </div>
+    
+    
+</div>

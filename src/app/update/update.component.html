@@ -1,0 +1,36 @@
+<!-- <div class="form-group">
+    No
+    <input   id="no" [(ngModel)]="emp.no" name="no" disabled="disabled">
+  </div>
+  <div class="form-group">
+    Name
+    <input   id="name"  [(ngModel)]="emp.name" name="name">
+  </div>
+  <div class="form-group">
+    Address
+    <input   id="address"  [(ngModel)]="emp.address" name="address">
+  </div>
+
+  <button type="submit" (click)="update()" class="btn btn-primary">Update</button> -->
+  <form role="form">
+    <div class="form-group">
+        <label for="no">No:</label>
+        <input type="no" [(ngModel)]="emp.no" disabled="disabled" class="form-control" placeholder="Enter name" name="no">
+      </div>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="name" [(ngModel)]="emp.name" class="form-control" placeholder="Enter name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <input type="address" [(ngModel)]="emp.address" class="form-control" placeholder="Enter address" name="address">
+    </div>
+
+    <td><img style="height: 150px;width: 40%" src="data:image/gif;base64,{{emp.image}}" alt=""><br>
+      <label for=""><b>Profile Picture</b></label>
+      <input (change)="onSelectFile($event)" style="border: none" type="file" class="form-control">
+      <br>
+      <br>
+    
+    <button type="submit" (click)="update()" class="btn btn-primary">Update</button> 
+</form>

@@ -1,0 +1,43 @@
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<form #myForm="ngForm" (ngSubmit)="OnEdit(myForm)" style="width: 100%;">
+        <legend>Edit Book Details</legend>
+        <div class="form-group">
+                <label for="b_id">Id</label>
+                <input readonly type="number" class="form-control" name="b_id" id="b_id" placeholder="enter id of the book" [(ngModel)] = "book.bid">
+            </div>
+
+        <div class="form-group">
+            <label for="name">Title</label>
+            <input readonly type="text" class="form-control" name="title" id="title" placeholder="enter title of the book" [(ngModel)] = "book.title">
+        </div>
+    
+        <div class="form-group">
+            <label for="author">Author</label>
+            <input readonly type="text" class="form-control" name="author" id="author" placeholder="enter Author name" [(ngModel)] = "book.author" >
+        </div>
+
+        <div class="form-group">
+            <label for="noOfCopies">Old no of Copies</label>
+            <input readonly type="text" class="form-control" name="noOfCopies" id="noOfCopies" placeholder="enter ISBN" [(ngModel)] = "book.noOfCopies" >
+        </div>
+
+    <!-- <div class="form-group">
+        <label for="image">Image</label>
+        <input  type="text" class="form-control" name="image" id="image" placeholder="enter image" [(ngModel)] = "book.image">
+    </div> -->
+
+        <div>
+        <label for="count">Enter no of copies to add</label>
+        <input  type="number" class="form-control" name="count" id="count" placeholder="enter count" [(ngModel)] = "count">
+        </div>
+
+        <hr>
+
+       <button type="submit" class="btn btn-primary">Add Copies</button>
+        <br>
+        <br>
+        <button type="button" (click)="Back()" class="btn Back">Back</button>
+        
+    </form>
+</div>  

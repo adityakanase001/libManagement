@@ -1,0 +1,77 @@
+<!-- 
+<form #myForm="ngForm" (ngSubmit)="add(myForm)" role="form">
+
+ 
+
+  {{msg}}
+  <div class="form-group">
+  <label class="sr-only" for="No">No</label>
+    <input   id="no" ngModel name="no" placeholder="Please enter no">
+  </div>
+  <div class="form-group">
+  <label class="sr-only" for="">Name</label>
+
+    <input   id="name"  ngModel name="name" placeholder="Please enter Name">
+  </div>
+  <div class="form-group">
+  <label class="sr-only" for="">Address</label>
+
+    <input   id="address"  ngModel name="address" placeholder="Please enter address">
+  </div>
+
+  
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+ -->
+
+
+
+ <div class="col-md-2"></div>
+ <div class="col-md-8">
+ <form (ngSubmit)="AddBook(formdata)" style="width: 100%;">
+         <legend>Add a New Book</legend>
+     
+         <div class="form-group">
+             <label for="title">Title</label>
+             <input type="text" class="form-control" name="title" id="title" placeholder="enter name of the book" [(ngModel)]="book.title">
+         </div>
+     
+         <div class="form-group">
+             <label for="author">Author</label>
+             <input type="text" class="form-control" name="author" id="author" placeholder="enter Author name" [(ngModel)]="book.author">
+         </div>
+ 
+         <div class="form-group">
+             <label for="publisher">Publisher Name</label>
+             <input type="text" class="form-control" name="publisher" id="publisher" placeholder="enter publication name" [(ngModel)]="book.publisher">
+         </div>
+ 
+         <div class="form-group">
+             <label for="isbn">ISBN</label>
+             <input type="text" class="form-control" name="isbn" id="isbn" placeholder="enter ISBN no" [(ngModel)]="book.isbn">
+         </div>
+         
+         <div class="form-group" style="widows: 50%;">
+             <label for="noOfCopies">No of Copies to add</label>
+             <input type="number" class="form-control" name="noOfCopies" id="noOfCopies" [(ngModel)]="book.noOfCopies">
+         </div>
+
+         <div class="form-group" style="widows: 50%;">
+          <label for="rackNo">Rack No</label>
+          <input type="number" class="form-control" name="rackNo" id="rackNo" [(ngModel)]="book.rackNo">
+          </div>
+ 
+         <!-- <div class="form-group">
+             <label for="image">Image</label>
+             <input type="text" class="form-control" name="image" id="image" placeholder="enter image" [(ngModel)]="book.image">
+         </div> -->
+
+         <button type="submit" class="btn btn-success" >Add book</button>&nbsp;&nbsp;&nbsp;&nbsp;
+         <button type="button" class="btn btn-danger" (click)="Cancel()" >Cancel</button>
+         <br>
+         
+     
+     </form>
+ </div>
+

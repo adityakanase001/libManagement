@@ -1,0 +1,56 @@
+
+<div class="col-md-12">
+    <h2><b>List Of Paid Members</b></h2><hr>
+    <div class="table-responsive">
+            <table class="table">
+                <thead>
+                        <tr style="background-color:silver">
+                                <th scope="col">User Id</th>
+                                <th scope="col">User Name</th>
+                                <th scope="col">Email Id</th>
+                                <th scope="col">No of Issues Done</th>
+                                <th scope="col">Gender</th>
+                            </tr>
+                </thead>
+              
+              <tbody>
+                    <tr *ngFor="let u of members" style="background-color:whitesmoke">
+                            <td>{{u.id}}</td>
+                            <td>{{u.fName}} {{u.lName}}</td>
+                            <td>{{u.email}}</td>
+                            <td>{{u.countOfIssues}}</td>
+                            <td>{{u.gender}}</td>
+                          </tr>
+              </tbody>
+            </table>
+            
+          </div>
+
+          <hr><hr>
+
+          <h2><b>List Of UnPaid Members</b></h2><hr>
+
+          <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr style="background-color:silver">
+                                <th>u_id</th> 
+                                <th>first_name</th>  
+                                <th>last_name</th>
+                                <th>email</th>
+                                <th>gender</th>
+                              </tr>
+                            </thead>
+                            <tbody >
+                              <tr *ngFor="let u of nonmembers" style="background-color:whitesmoke">
+                                <td>{{u.id}}</td>
+                                <td>{{u.fName}}</td>
+                                <td>{{u.lName}}</td>
+                                <td>{{u.email}}</td>
+                                <td>{{u.gender}}</td>
+                </table>
+                
+            
+</div>
+
+

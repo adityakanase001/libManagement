@@ -1,0 +1,18 @@
+<div class="table-responsive">
+    <table class="table">
+      <tr>
+          <th scope="col">User Id</th>
+          <th scope="col">User Name</th>
+          <th scope="col">No of Issues Done</th>
+      </tr>
+      <tr *ngFor="let u of users">
+        <td>{{u.id}}</td>
+        <td>{{u.fName}} {{u.lName}}</td>
+        <td>{{u.countOfIssues}}</td>
+        <td>
+          <button type="button" routerLink="/home/membertoissue/{{u.id}}" class="btn btn-success">Issue Book</button>
+      </td>
+      </tr>
+    </table>
+    
+  </div>

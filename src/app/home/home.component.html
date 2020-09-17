@@ -1,0 +1,351 @@
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <tbody>
+      <tr>
+        <div class="col-md-3">
+            <div [ngSwitch]="role">
+                
+              <ul class="navbar navbar-inverse" *ngSwitchCase="">
+                <li class="active">
+                  <h4 style="color: azure;"><b>NEW USER ??<br> Register Here ... </b></h4>
+                  <a href="register">REGISTER</a>
+              </li>
+              <li>
+                      <a href="#">Link</a>
+                  </li><li>
+                          <a href="#">Link</a>
+                      </li><li>
+                              <a href="#">Link</a>
+                          </li><li>
+                                  <a href="#">Link</a>
+                              </li><li>
+                                      <a href="#">Link</a>
+                                  </li><li>
+                                          <a href="#">Link</a>
+                                      </li><li>
+                                              <a href="#">Link</a>
+                                          </li><li>
+                                                  <a href="#">Link</a>
+                                              </li><li>
+                                                      <a href="#">Link</a>
+                                                  </li><li>
+                                                          <a href="#">Link</a>
+                                                      </li><li>
+                                                              <a href="#">Link</a>
+                                                          </li>
+
+                  <hr>
+                  <br>
+                  <hr>
+            </ul>
+                  <ul class="navbar navbar-inverse" *ngSwitchCase="'LIBRARIAN'">
+                    <br>
+                      <li><a class="navbar-brand" href="#">Hello ,{{role}} , {{user.fName}}</a></li><br>
+                    <hr>
+                      <li><a routerLink="/home/editprofile">Edit Profile</a></li>
+                      <li><a routerLink="/home/changePassword" routerLinkActive="active">Change Password</a></li>
+                      <hr>
+                      <li><a routerLink="/home/listofbooks"><b>List all Books</b></a></li>
+                      <li><a routerLink="/home/checkBookavailability">Check Book Availability</a></li>
+                      <li><a routerLink="/home/add">Add New Book</a></li>
+                      <li><a routerLink="/home/copies">Add New Copy</a></li>
+                      <li><a routerLink="/home/returnbook">Return Book</a></li>
+                      <li><a routerLink="/home/issue">Issue Book</a></li>
+                      <li><a routerLink="/home/issuedbooks">List of Issued Book</a></li>
+                      <li><a routerLink="/home/registerbylibrarian">Add New Member</a></li>
+                      <li><a routerLink="/home/payment">Take payment</a></li>
+                      <!-- <li><a routerLink="/home/paymenthistory">Payment History</a></li> -->
+                      <li><a routerLink="/home/listofuser">List Of All User</a></li>
+                      <!-- <li><a routerLink="/home/address">Add adress demo</a></li> -->
+
+                      <hr>
+            
+                      <li> <form role="search">
+                        <div class="form-group">
+                          <input type="text" [(ngModel)]="word" value="{{word}}" name = "word" placeholder="Search Book by Name">
+                        </div>
+                        <button type="button" (click)="onSearch(word)" class="btn btn-default">Search</button>
+                      </form></li>
+                      <br>
+                      <hr>
+                </ul>
+
+        
+        
+                <ul class="navbar navbar-inverse" *ngSwitchCase="'ADMIN'">
+                    <br>
+                    <li><a class="navbar-brand" href="#">Hello ,{{role}} {{user.fName}}</a></li><br>
+                  <hr>
+                      <li><a routerLink="/home/editprofile">Edit Profile</a></li>
+                      <li><a routerLink="/home/changePassword" routerLinkActive="active">Change Password</a></li>
+                      <hr>
+                      <li><a routerLink="/home/listofbooks"><b>List all Books</b></a></li>
+                      <li><a routerLink="/home/checkBookavailability">Check Book Availability</a></li>
+                      <li><a routerLink="/home/listofuser">List Of All User</a></li>
+                  <!-- <li ><a routerLink="/home/subjectwise">Subjectwise Copies Report</a></li> -->
+                  <!-- <li><a routerLink="/home/bookwise">Bookwise Copies Report</a></li> -->
+                  <!-- <li><a routerLink="/home/feesorfine">Fees/Fine Report</a></li>  -->
+                  <br> 
+                  <hr>
+                </ul>
+                 
+                <ul class="navbar navbar-inverse" *ngSwitchCase="'MEMBER'">
+                    <br>
+                    <li><a class="navbar-brand" href="#">Hello ,{{role}} {{user.fName}}</a></li><br>
+                    <hr>
+                    <li><a routerLink="/home/editprofile">Edit Profile</a></li>
+                    <li><a routerLink="/home/changePassword" routerLinkActive="active">Change Password</a></li>
+                    <hr>
+                  <li><a routerLink="/home/membooks"><b>List all Books</b></a></li>
+                  <li><a routerLink="/home/listofissuedBook">Issued Books</a></li>
+                  <!-- <li><a routerLink="/home/userpaymenthistoty">Payment History</a></li> -->
+                  <!-- <li><a routerLink="/home/help">help</a></li> -->
+                  <!-- <li><a routerLink="/home/address">Add adress demo</a></li> -->
+        
+                  <hr>
+                  <li> <form role="search">
+                    <div class="form-group">
+                      <input type="text" [(ngModel)]="word" value="{{word}}" name = "word" placeholder="Search Book by Name">
+                    </div>
+                    <button type="button" (click)="onSearch(word)" class="btn btn-default">Search</button>
+                  </form></li>
+                  <br>
+                  <hr>
+                </ul>
+        
+              </div>
+        </div>
+
+        <div class="col-md-6">
+          <router-outlet></router-outlet>
+        </div>
+
+        <div class="col-md-3">
+          
+            <div class="navbar">
+                <a class="navbar-brand"></a>
+                <ul class="nav navbar-inverse">
+                    <li class="active">
+                        <h4 style="color: azure;"><b>ADVERTISEMENTs !!!<br> </b></h4>
+                        <a href="#">Adds</a>
+                    </li>
+                    <li>
+                            <a href="#">Link</a>
+                        </li><li>
+                                <a href="#">Link</a>
+                            </li><li>
+                                    <a href="#">Link</a>
+                                </li><li>
+                                        <a href="#">Link</a>
+                                    </li><li>
+                                            <a href="#">Link</a>
+                                        </li><li>
+                                                <a href="#">Link</a>
+                                            </li><li>
+                                                    <a href="#">Link</a>
+                                                </li><li>
+                                                        <a href="#">Link</a>
+                                                    </li><li>
+                                                            <a href="#">Link</a>
+                                                        </li><li>
+                                                                <a href="#">Link</a>
+                                                            </li>
+                                                            <li>
+                                                                    <a href="#">Link</a>
+                                                                </li>
+                                                            
+                </ul>
+            </div>  
+        </div>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 
+
+<nav class="navbar sticky-top navbar-inverse" *ngIf="flag">
+    <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Hello ,{{email}}</a>
+        </div>
+  
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" [ngSwitch]="email">
+          <ul class="nav navbar-nav">
+  
+            <li><a routerLink="/home/edit">Edit Profile</a></li>
+            <li><a routerLink="/home/changePassword" routerLinkActive="active">Change Password</a></li>
+  
+  
+            <ul class="nav navbar-nav" *ngSwitchCase="'Librarian'">
+            <li><a routerLink="/home/checkBookavailability">Check Book Availability</a></li>
+            <li><a routerLink="/home/add">Add New Book</a></li>
+            <li><a routerLink="/home/add">Add New Copy</a></li>
+            <li><a routerLink="/home/returnbook">Return Book</a></li>
+            <li><a routerLink="/home/issue">Issue Book</a></li>
+            <li><a routerLink="/home/issuedbooks">List of Issued Book</a></li>
+            <li><a routerLink="/home/addmember">Add New Member</a></li>
+            <li><a routerLink="/home/payment">Take payment</a></li>
+            <li><a routerLink="/home/paymenthistory">Payment History</a></li>
+            <li><a routerLink="/home/listofuser">List Of All User</a></li>
+  
+            <li> <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Book by Name">
+              </div>
+              <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+            </form></li>
+          </ul>
+  
+  
+            <ul class="nav navbar-nav" *ngSwitchCase="'Admin'">
+            <li ><a routerLink="/home/subjectwise">Subjectwise Copies Report</a></li>
+            <li><a routerLink="/home/bookwise">Bookwise Copies Report</a></li>
+            <li><a routerLink="/home/feesorfine">Fees/Fine Report</a></li>   
+          </ul>
+           
+          <ul class="nav navbar-nav" *ngSwitchCase="'User'">
+            <li><a routerLink="/home/listofissuedBook">Issued Books</a></li>
+            <li><a routerLink="/home/userpaymenthistoty">Payment History</a></li>
+            <li><a routerLink="/home/help">help</a></li>
+  
+            <li> <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Book by Name">
+              </div>
+              <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+            </form></li>
+          </ul>
+  
+          <ul class="nav navbar-nav navbar-right">
+            <li><button (click)="onLogout()" style="margin-top: 10px;" class="btn btn-link">Logout</button></li>
+          </ul>
+        </ul>
+        </div>
+    </div>
+  </nav>
+  
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+
+ -->
+
+
+  <!-- <div class="table-responsive">
+      <table class="table table-hover">
+          <tbody>
+              <tr>
+                  <td style="width: 20%;">
+                      
+                      <div class="navbar">
+                          <a class="navbar-brand"></a>
+                          <ul class="nav navbar-inverse" *ngSwitchCase="'Librarian'">
+                              <li class="active">
+                                  
+                                  <a href="#">REGISTER User</a>
+                              </li>
+                              <li><a routerLink="/home/checkBookavailability">Check Book Availability</a></li>
+              <li><a routerLink="/home/newbook">Add New Book</a></li>
+              <li><a routerLink="/home/newcopy">Add New Copy</a></li>
+              <li><a routerLink="/home/returnbook">Return Book</a></li>
+              <li><a routerLink="/home/issueBook">Issue Book</a></li>
+              <li><a routerLink="/home/issuedbooks">List of Issued Book</a></li>
+              <li><a routerLink="/home/addmember">Add New Member</a></li>
+              <li><a routerLink="/home/payment">Take payment</a></li>
+              <li><a routerLink="/home/paymenthistory">Payment History</a></li>
+              <li><a routerLink="/home/listofuser">List Of All User</a></li>
+                          </ul>
+  
+  
+  
+  <ul class="nav navbar-inverse" *ngSwitchCase="'Admin'">
+                              <li class="active">
+                                  <a href="#">REGISTER LIBRARIAN</a>
+                              </li>
+                              <li><a routerLink="/home/checkBookavailability">Check Book Availability</a></li>
+              <li><a routerLink="/home/newbook">Add New Book</a></li>
+              <li><a routerLink="/home/newcopy">Add New Copy</a></li>
+              <li><a routerLink="/home/returnbook">Return Book</a></li>
+              <li><a routerLink="/home/issueBook">Issue Book</a></li>
+              <li><a routerLink="/home/issuedbooks">List of Issued Book</a></li>
+              <li><a routerLink="/home/addmember">Add New Member</a></li>
+              <li><a routerLink="/home/payment">Take payment</a></li>
+              <li><a routerLink="/home/paymenthistory">Payment History</a></li>
+              <li><a routerLink="/home/listofuser">List Of All User</a></li>
+                          </ul>
+  
+  
+  
+  
+  <ul class="nav navbar-inverse" *ngSwitchCase="'User'">
+                              
+               <li><a routerLink="/home/listofissuedBook">Issued Books</a></li>
+              <li><a routerLink="/home/userpaymenthistoty">Payment History</a></li>
+              <li><a routerLink="/home/help">help</a></li>
+    
+              <li> <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search Book by Name">
+                </div>
+                <button type="button" (click)="onSearch()" class="btn btn-default">Search</button>
+              </form></li>
+                          </ul>
+  
+  
+  
+  
+  
+  </div>
+                      
+                  </td>
+                  <td>
+                      <div class="container">
+                          <router-outlet></router-outlet>
+                        </div>
+   
+                  </td>
+                  <td style="width: 20%;">
+                      
+                          <div class="navbar">
+                              <a class="navbar-brand"></a>
+                              <ul class="nav navbar-inverse">
+                                  <li class="active">
+                                      <h4 style="color: azure;"><b>ADVERTISEMENTs !!!<br> </b></h4>
+                                      <a href="#">Adds</a>
+                                  </li>
+                                  <li>
+                                          <a href="#">Link</a>
+                                      </li><li>
+                                              <a href="#">Link</a>
+                                          </li><li>
+                                                  <a href="#">Link</a>
+                                              </li><li>
+                                                      <a href="#">Link</a>
+                                                  </li><li>
+                                                          <a href="#">Link</a>
+                                                      </li><li>
+                                                              <a href="#">Link</a>
+                                                          </li><li>
+                                                                  <a href="#">Link</a>
+                                                              </li><li>
+                                                                      <a href="#">Link</a>
+                                                                  </li><li>
+                                                                          <a href="#">Link</a>
+                                                                      </li><li>
+                                                                              <a href="#">Link</a>
+                                                                          </li>
+                                                                          <li>
+                                                                                  <a href="#">Link</a>
+                                                                              </li>
+                                                                          
+                              </ul>
+                          </div>
+                          
+                      </td>
+              </tr>
+          </tbody>
+      </table>
+  </div> -->
+  

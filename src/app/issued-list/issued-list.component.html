@@ -1,0 +1,30 @@
+
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      
+                      <table class="table table-striped table-hover" style="background-color: grey;">
+                        <thead>
+                          <tr>
+                            <!-- <th scope="col">Issue Id</th> -->
+                            <th scope="col">Book Id</th>
+                            <th scope="col">User Id</th>
+                            <th scope="col">User Name</th>
+                            <th scope="col">Issue Date</th>
+                            <th scope="col">Due Date</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let i of issues">
+                            <!-- <td>{{i.iid}}</td> -->
+                            <td>{{i.book_id}}</td>
+                            <td>{{i.user_id.id}}</td>
+                            <td>{{i.user_id.fName}}</td>
+                            <td>{{i.issue_date}}</td>
+                            <td>{{i.due_date}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                    
+                    </div>
+                      </div>

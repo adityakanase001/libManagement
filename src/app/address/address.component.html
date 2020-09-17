@@ -1,0 +1,129 @@
+<div class="col-md-1"></div>
+<div class="col-md-10">
+            <h2 style="text-align: center; color: blueviolet">Enter Address details</h2>
+            
+            <hr><br>
+            <form #myForm="ngForm" (ngSubmit)="OnAddressAddCallMe(myForm)">
+                <!-- <legend>Edit User</legend> -->
+            
+                <div class="form-group">
+                    <label for="addr1">Adress Line 1</label>
+                    <!-- <input type="text" class="form-control" id="addr1" name="addr1" [(ngModel)]="addr.addr1" readonly> -->
+                    <textarea name="addr1" id="addr1" class="form-control" rows="3" [(ngModel)]="addr.addr1" required="required"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="addr2">Adress Line 2</label>
+                    <!-- <input type="text" class="form-control" id="addr1" name="addr1" [(ngModel)]="addr.addr1" readonly> -->
+                    <textarea name="addr2" id="addr2" class="form-control" rows="3" [(ngModel)]="addr.addr2"></textarea>
+                </div>
+            
+                <div class="form-group" style="width: 50;">
+                    <label for="city">Enter City</label>
+                    <input type="text" class="form-control" id="city" name="city" [(ngModel)]="addr.city" >
+                </div>
+
+            
+                <div class="form-group" style="width: 50;">
+                    <label for="state">Enter State</label>
+                    <input type="text" class="form-control" id="state" name="state" [(ngModel)]="addr.state" >
+                </div>
+
+                <div class="form-group" style="width: 50;">
+                    <label for="country">Enter Country</label>
+                    <input type="text" class="form-control" id="country" name="country" [(ngModel)]="addr.country" >
+                </div>
+
+                <div class="form-group" style="width: 50;">
+                    <label for="pinCode">Pin Code</label>
+                    <input type="text" class="form-control" id="pinCode" name="pinCode" [(ngModel)]="addr.pinCode" >
+                </div>
+            
+                <button type="submit" class="btn btn-primary">Add Address</button>
+                
+                <button type="button" class="btn btn-danger" (click)="CancelUpdate()">Cancel</button>
+                
+            
+            </form>
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
+            
+            <form #myForm="ngForm" (ngSubmit)="OnAddCallMe(myForm)">
+                    
+                
+                    <div class="form-group">
+                        <label for="fName">First Name<span class="required">*</span></label>
+                        <input ngModel type="text" class="form-control" id="fName" name="fName" placeholder="Enter first name">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="mName">Middle Name</label>
+                        <input ngModel type="text" class="form-control" id="mName" name="mName" placeholder="Enter middle name">
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="lName">Last Name<span class="required">*</span></label>
+                        <input ngModel type="text" class="form-control" id="lName" name="lName" placeholder="Enter last name">
+                    </div>
+            
+                    <div class="form-group" style="width: 40%">
+                        <label for="age">Age</label>
+                        <input ngModel type="number" class="form-control" id="age" name="age" placeholder="Enter age">
+                    </div>
+
+
+                    <div class="form-group" style="width: 50%">
+                        <label for="phoneNo">Phone No</label>
+                        <input ngModel type="text" class="form-control" id="phoneNo" name="phoneNo" placeholder="Enter Phone no">
+                    </div>
+
+                    <div class="form-group" style="width: 50%">
+                        <label for="dob">Phone No</label>
+                        <input ngModel type="date" class="form-control" id="dob" name="dob" >
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="email">Email<span class="required">*</span></label>
+                        <input ngModel type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="password">Password<span class="required">*</span></label>
+                        <input ngModel type="password" class="form-control" id="password" name="password" placeholder="Enter password">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="gender">Gender</label><br>
+                        <input ngModel type="radio" name="gender" value="MALE"> Male &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input ngModel type="radio" name="gender" value="FEMALE"> Female &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input ngModel type="radio" name="gender" value="OTHER"> Other &nbsp;&nbsp;&nbsp;&nbsp;
+                    </div>
+
+                    <select class="form-group" name="gender">
+                        <option class="form-control" value="MALE">Male</option>
+                        <option class="form-control" value="FEMALE">Female</option>
+                        <option class="form-control" value="mercedes">Other</option>
+                    </select>
+            
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button style="float: right" type="button" class="btn btn-success" (click)="GoBackHome()">Go Back to Home</button>
+                    <br>
+                    
+                        
+                    <span class="label label-warning">{{message}}</span>
+                    
+        </form>
+</div> -->

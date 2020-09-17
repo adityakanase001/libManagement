@@ -1,0 +1,32 @@
+
+                  <div class="col-md-12">
+                    <div class="table-responsive">
+                      
+                      <table class="table table-striped table-hover" style="background-color: grey;">
+                        <thead>
+                          <tr>
+                            <th scope="col">Book Id</th>
+                            <th scope="col">Book Name</th>
+                            <th scope="col">ISBN</th>
+                            <th scope="col">No Of Copies</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let book of books">
+                            <td>{{book.bid}}</td>
+                            <td>{{book.title}}</td>
+                            <td>{{book.isbn}}</td>
+                            <td>{{book.noOfCopies}}</td>
+                            <td>
+                              <button type="button" (click)="delete(book.bid)"class="btn btn-danger">Delete</button>
+                              </td>
+                              <td>
+                                  <button type="button" routerLink="/home/updatebook/{{book.bid}}" class="btn btn-warning">Update</button>
+                              </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
+                    
+                    </div>
+                      </div>

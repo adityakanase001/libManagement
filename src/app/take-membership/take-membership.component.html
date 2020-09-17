@@ -1,0 +1,41 @@
+<div class="container">
+
+    <div class="table-fixed" > 
+      <table class="table table-hover" >
+        <thead>
+          <tr style="background-color:silver">
+            <th>u_id</th> 
+            <th>first_name</th>  
+            <th>last_name</th>
+            <th>email</th>
+            <th>gender</th>
+            <th></th>
+        <th></th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let u of users" style="background-color:whitesmoke">
+            <td>{{u.u_id}}</td>
+            <td>{{u.first_name}}</td>
+            <td>{{u.last_name}}</td>
+            <td>{{u.email}}</td>
+            <td>{{u.gender}}</td>
+            <!-- <td>
+                <input type="button" class="btn btn-success" value="Issue">
+            </td> -->
+            
+            <td>
+            <button type="button" (click)="delete(u.u_id)"class="btn btn-danger">Delete</button>
+            </td>
+            
+          </tr>
+           <!-- <tr>
+                <td>
+                    <button type="button" (click)="back()" class="btn btn-primary">Back</button>
+                </td>
+              </tr> -->
+              <!-- <br><br><br><br><br>  <br><br><br><br><br>  <br><br><br><br><br>  <br><br><br><br><br>  <br><br><br><br><br> -->
+        </tbody>
+      </table>
+    </div>
+    </div>
